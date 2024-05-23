@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.h2_t3_programacion.HelloController">
+    <VBox spacing="10" padding="10">
+        <HBox spacing="10">
+            <TextField fx:id="titleFilter" promptText="Filter by title"/>
+            <Button text="Add Book" onAction="#addBook"/>
+            <Button text="Delete Book" onAction="#deleteBook"/>
+        </HBox>
+        <TableView fx:id="bookTable">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title"/>
+                <TableColumn fx:id="authorColumn" text="Author"/>
+                <TableColumn fx:id="yearColumn" text="Year"/>
+                <TableColumn fx:id="isbnColumn" text="ISBN"/>
+            </columns>
+        </TableView>
+        <HBox spacing="10">
+            <TextField fx:id="titleField" promptText="Title"/>
+            <TextField fx:id="authorField" promptText="Author"/>
+            <TextField fx:id="yearField" promptText="Year"/>
+            <TextField fx:id="isbnField" promptText="ISBN"/>
+            <Button text="Add" onAction="#addBook"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
